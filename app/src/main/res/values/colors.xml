@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="orange">#FF5722</color>
+    <color name="light_orange">#B9FDDDD3</color>
+    <color name="green">#4CAF50</color>
+    <color name="pink">#F9E0F9</color>
+    <color name="red">#F44336</color>
+    <color name="yellow">#FFC107</color>
+    <color name="icon_color">#374856</color>
+    <color name="selected_date">#FFCCCCCC</color>
+
+    <color name="blue">#2196F3</color>
+    <color name="mainColor">#03A9F4</color>
+    <color name="lightBlue">#4FC8FF</color>
+
+    <color name="gray">#eff2f7</color>
+    <color name="darkGray">#D5D7DC</color>
+    <color name="linkBack">#e9e6df</color>
+
+    <color name="greenDark">#007E05</color>
+    <color name="light_main">#F67A34</color>
+
+    <color name="transparentColor" >#00FFFFFF</color>
+    <color name="blue_purple">#3F51B5</color>
+    <color name="light_blue_purple">#96A6FF</color>
+    <color name="transparent_blue_purple">#BEBEC8FF</color>
+    <color name="back_green_light">#85FF8A</color>
+    <color name="back_blue_light">#9485CAFF</color>
+
+    <color name="real_purple">#673AB7</color>
+    <color name="light_real_purple">#CBB0FD</color>
+
+    <color name="light_color1_blue">#e6e6fe</color>
+    <color name="light_green_color2">#e6fade</color>
+    <color name="light_yellow">#fff8ce</color>
+    <color name="light_red">#ffdfd6</color>
+</resources>
