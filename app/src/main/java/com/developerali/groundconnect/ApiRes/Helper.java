@@ -1,6 +1,4 @@
-package com.developerali.groundconnect;
-
-import static androidx.core.content.ContextCompat.startActivity;
+package com.developerali.groundconnect.ApiRes;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
+
+import com.developerali.groundconnect.R;
 
 import java.util.List;
 

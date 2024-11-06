@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.GroundConnect" parent="Base.Theme.GroundConnect" />
+    <style name="Theme.TikitakShorts.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TikitakShorts.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

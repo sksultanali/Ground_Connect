@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.developerali.groundconnect.Helper;
+import com.developerali.groundconnect.ApiRes.Helper;
 import com.developerali.groundconnect.Models.ToolsModel;
 import com.developerali.groundconnect.R;
 import com.developerali.groundconnect.databinding.ChildSchemesBinding;

@@ -37,8 +37,8 @@ public class Schemes extends AppCompatActivity {
         toolsModels.add(new ToolsModel("Khadyasathi", getDrawable(R.drawable.khad), "https://food.wb.gov.in/"));//6
         toolsModels.add(new ToolsModel("Skill (Jobs)", getDrawable(R.drawable.skill_india), "https://www.skillindiadigital.gov.in/opportunities"));//7
         toolsModels.add(new ToolsModel("Suggestions", getDrawable(R.drawable.sugges), null));//8
-        toolsModels.add(new ToolsModel("PartyMember", getDrawable(R.drawable.sugges), null));//9
-        toolsModels.add(new ToolsModel("Skill India", getDrawable(R.drawable.sugges), "https://www.skillindiadigital.gov.in/"));//9
+        toolsModels.add(new ToolsModel("PartyMember", getDrawable(R.drawable.team), null));//9
+        toolsModels.add(new ToolsModel("Skill India", getDrawable(R.drawable.skill), "https://www.skillindiadigital.gov.in/"));//9
 
 
         ToolsAdapter adapter = new ToolsAdapter(Schemes.this, toolsModels);

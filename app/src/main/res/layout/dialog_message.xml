@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10mdp"
+    android:background="@drawable/drawable_bottom_bar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/formName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Form Name"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="@dimen/_5mdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12font_mdp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2mdp"
+        android:layout_marginBottom="@dimen/_5mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:background="@color/darkGray"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_height="match_parent"
+        android:hint="Title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:hint="Describe">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:minLines="5"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_marginTop="@dimen/_10mdp"/>
+
+</LinearLayout>
