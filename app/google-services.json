@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894556087108",
+    "project_id": "groundconnect-9bace",
+    "storage_bucket": "groundconnect-9bace.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894556087108:android:482733e7d6cbe4b3ebed11",
+        "android_client_info": {
+          "package_name": "com.developerali.groundconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Z7rZJR0Xceywygk_Jw8FbfS1sOurM-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
