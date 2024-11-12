@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment {
 
     FragmentHomeBinding binding;
     ArrayList<ToolsModel> toolsModels = new ArrayList<>();
+    private static final String BASE_URL = "https://fcm.googleapis.com/";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

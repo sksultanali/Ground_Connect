@@ -1,9 +1,18 @@
 [versions]
+adapterRxjava2 = "2.9.0"
 agp = "8.5.0"
+circleimageview = "3.1.0"
+circularstatusview = "1.0.1"
+dynamicsizes = "1.0"
+firebaseUiDatabase = "8.0.0"
+firebaseDatabaseVersion = "16.0.4"
+glide = "4.16.0"
+googleAuthLibraryOauth2Http = "1.3.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+lottie = "6.6.0"
 material = "1.12.0"
 activity = "1.9.3"
 constraintlayout = "2.1.4"
@@ -12,12 +21,28 @@ googleGmsGoogleServices = "4.4.2"
 firebaseDatabase = "21.0.0"
 firebaseStorage = "21.0.1"
 firebaseMessaging = "24.0.3"
+okhttp = "4.9.0"
+okhttpVersion = "4.11.0"
+shimmerrecyclerview = "v1.3"
+storyview = "1.0.2-alpha"
+timeago = "4.0.3"
+viewpager2 = "1.1.0"
 
 [libraries]
+adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "adapterRxjava2" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+circularstatusview = { module = "com.devlomi:circularstatusview", version.ref = "circularstatusview" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "adapterRxjava2" }
+dynamicsizes = { module = "com.github.MrNouri:DynamicSizes", version.ref = "dynamicsizes" }
+firebase-database-v1604 = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabaseVersion" }
+firebase-ui-database = { module = "com.firebaseui:firebase-ui-database", version.ref = "firebaseUiDatabase" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-auth-library-oauth2-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleAuthLibraryOauth2Http" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -25,6 +50,13 @@ browser = { group = "androidx.browser", name = "browser", version.ref = "browser
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+okhttp-v490 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp3-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "adapterRxjava2" }
+shimmerrecyclerview = { module = "com.github.sharish:ShimmerRecyclerView", version.ref = "shimmerrecyclerview" }
+storyview = { module = "com.github.OMARIHAMZA:StoryView", version.ref = "storyview" }
+timeago = { module = "com.github.marlonlom:timeago", version.ref = "timeago" }
+viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

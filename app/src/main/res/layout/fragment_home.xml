@@ -17,24 +17,30 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/image_slider"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_100mdp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10mdp"
                 android:layout_marginStart="@dimen/_8mdp"
+                android:elevation="@dimen/_1mdp"
                 android:layout_marginEnd="@dimen/_8mdp"
-                app:iss_auto_cycle="true"
-                app:iss_corner_radius="20"
-                app:iss_delay="0"
-                app:iss_error_image="@color/black"
-                app:iss_period="2000"
-                android:background="@drawable/border_background_corners"
-                app:iss_placeholder="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view3"
-                tools:ignore="MissingConstraints" />
+                app:cardCornerRadius="@dimen/_10mdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background_corners">
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100mdp"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="0"
+                        app:iss_delay="0"
+                        app:iss_error_image="@color/black"
+                        app:iss_period="2000"
+                        app:iss_placeholder="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"

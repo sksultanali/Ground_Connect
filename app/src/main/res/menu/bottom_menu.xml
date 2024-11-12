@@ -12,6 +12,11 @@
         android:title="Shorts"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/settings"
+        android:title="settings"
+        android:icon="@drawable/baseline_settings_24"
+        app:showAsAction="ifRoom"/>
+    <item
         android:id="@+id/donation"
         android:title="Donation"
         android:icon="@drawable/healthcare"

@@ -17,10 +17,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.developerali.groundconnect.Activities.PostActivity;
+import com.developerali.groundconnect.ApiRes.ApiService;
 import com.developerali.groundconnect.BottomBars.DonationFragment;
 import com.developerali.groundconnect.BottomBars.HomeFragment;
 import com.developerali.groundconnect.BottomBars.ShortsFragment;
 import com.developerali.groundconnect.Helpers.AccessToken;
+import com.developerali.groundconnect.Models.NotificationRequest;
 import com.developerali.groundconnect.databinding.ActivityMainBinding;
 import com.developerali.groundconnect.databinding.DialogMessageBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,9 +30,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private static final String BASE_URL = "https://fcm.googleapis.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     transaction.replace(R.id.content, new HomeFragment()).addToBackStack(null);
                 }else if (id == R.id.shorts) {
                     transaction.replace(R.id.content, new ShortsFragment()).addToBackStack(null);
-                }else {
+                }else if (id == R.id.donation){
                     transaction.replace(R.id.content, new DonationFragment()).addToBackStack(null);
+                }else {
+
                 }
                 transaction.commit();
                 return true;
@@ -86,13 +97,52 @@ public class MainActivity extends AppCompatActivity {
                 });
         checkNotification();
 
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        // Create API service
+        ApiService apiService = retrofit.create(ApiService.class);
+
+        // Prepare the notification request
+        NotificationRequest notificationRequest = new NotificationRequest(
+                new NotificationRequest.Message(
+                        "users",
+                        new NotificationRequest.Notification(
+                                "Ground Connect Success",
+                                "This is from your candidate..."
+                        )
+                )
+        );
+
         AccessToken accessTokenHelper = new AccessToken();
         accessTokenHelper.getAccessToken(new AccessToken.AccessTokenCallback() {
             @Override
             public void onTokenReceived(String token) {
                 if (token != null) {
                     Log.d("Token", "Token: " + token);
-                    // Use the token as needed here
+
+                    String authorization = "Bearer " + token;
+                    apiService.sendNotification(authorization, notificationRequest).enqueue(new Callback<Void>() {
+                        @Override
+                        public void onResponse(Call<Void> call, Response<Void> response) {
+                            if (response.isSuccessful()) {
+                                Log.d("FCM", "Notification sent successfully!");
+                            } else {
+                                Log.d("FCM", "Error: " + response.message());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Void> call, Throwable t) {
+                            Log.d("FCM", "Failure: " + t.getMessage());
+                        }
+                    });
+
+
                 } else {
                     Log.e("Token", "Failed to retrieve token.");
                 }
