@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_10mdp"
+    android:elevation="@dimen/_2mdp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/toolImg"
+        android:layout_width="@dimen/_18mdp"
+        android:layout_height="@dimen/_18mdp"
+        android:visibility="visible"
+        android:gravity="center"
+        android:rotation="-90"
+        android:src="@drawable/ic_arrow_down"/>
+    <TextView
+        android:id="@+id/toolName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/_13font_mdp"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:text="RoomName"/>
+</LinearLayout>

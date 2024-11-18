@@ -31,7 +31,6 @@ viewpager2 = "1.1.0"
 [libraries]
 adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "adapterRxjava2" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
-circularstatusview = { module = "com.devlomi:circularstatusview", version.ref = "circularstatusview" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "adapterRxjava2" }
 dynamicsizes = { module = "com.github.MrNouri:DynamicSizes", version.ref = "dynamicsizes" }
 firebase-database-v1604 = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabaseVersion" }

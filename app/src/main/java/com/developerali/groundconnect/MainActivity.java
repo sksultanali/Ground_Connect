@@ -20,6 +20,7 @@ import com.developerali.groundconnect.Activities.PostActivity;
 import com.developerali.groundconnect.ApiRes.ApiService;
 import com.developerali.groundconnect.BottomBars.DonationFragment;
 import com.developerali.groundconnect.BottomBars.HomeFragment;
+import com.developerali.groundconnect.BottomBars.SettingsFragment;
 import com.developerali.groundconnect.BottomBars.ShortsFragment;
 import com.developerali.groundconnect.Helpers.AccessToken;
 import com.developerali.groundconnect.Models.NotificationRequest;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if (id == R.id.donation){
                     transaction.replace(R.id.content, new DonationFragment()).addToBackStack(null);
                 }else {
-
+                    transaction.replace(R.id.content, new SettingsFragment()).addToBackStack(null);
                 }
                 transaction.commit();
                 return true;
@@ -81,9 +82,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, PostActivity.class));
         });
 
-
-
-
         //subscribing all messages
         FirebaseMessaging.getInstance().subscribeToTopic("/topics/users")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -96,9 +94,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         checkNotification();
+        //sendNotification();
 
 
 
+
+
+
+
+
+    }
+
+    private void sendNotification() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -148,10 +155,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
     }
 
     private void checkNotification() {

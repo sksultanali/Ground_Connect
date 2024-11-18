@@ -1,12 +1,11 @@
 package com.developerali.groundconnect.BottomBars;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.developerali.groundconnect.R;
 import com.developerali.groundconnect.databinding.FragmentDonationBinding;
@@ -29,7 +28,7 @@ public class DonationFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentDonationBinding.inflate(inflater, container, false);
         BottomNavigationView bottomBar = getActivity().findViewById(R.id.bottomBar);
-        bottomBar.getMenu().getItem(2).setChecked(true);
+        bottomBar.getMenu().getItem(3).setChecked(true);
 
 
 

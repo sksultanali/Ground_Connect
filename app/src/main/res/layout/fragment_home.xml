@@ -17,6 +17,48 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:textSize="@dimen/_12font_mdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="@dimen/_50mdp"
+                    android:layout_height="@dimen/_50mdp"
+                    android:clickable="true"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:foregroundGravity="center"
+                    android:layout_gravity="center"
+                    app:tint="@color/mainColor"
+                    android:src="@drawable/plus" />
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    android:id="@+id/statusList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5mdp"
+                    app:shimmer_demo_angle="20"
+                    app:shimmer_demo_child_count="10"
+                    app:shimmer_demo_grid_child_count="2"
+                    app:shimmer_demo_layout="@layout/demo_status"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal"
+                    tools:listitem="@layout/item_status" />
+            </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +74,7 @@
                     <com.denzcoskun.imageslider.ImageSlider
                         android:id="@+id/image_slider"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_100mdp"
+                        android:layout_height="@dimen/_140mdp"
                         app:iss_auto_cycle="true"
                         app:iss_corner_radius="0"
                         app:iss_delay="0"
@@ -86,11 +128,154 @@
             <!--                android:layout_marginEnd="@dimen/_10mdp"-->
             <!--                android:layout_marginTop="@dimen/_5mdp"/>-->
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:cardCornerRadius="@dimen/_10mdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/_10mdp"
+                    android:background="@drawable/golden_gradient">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_yellow_corner"
+                            android:padding="@dimen/_5mdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20mdp"
+                                android:layout_height="@dimen/_20mdp"
+                                android:src="@drawable/baseline_favorite_24" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:background="@drawable/bg_white_corner"
+                            android:padding="@dimen/_5mdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20mdp"
+                                android:layout_height="@dimen/_20mdp"
+                                android:src="@drawable/baseline_favorite_24" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white_corner"
+                            android:padding="@dimen/_5mdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20mdp"
+                                android:layout_height="@dimen/_20mdp"
+                                android:src="@drawable/baseline_favorite_24" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:background="@drawable/bg_yellow_corner"
+                            android:padding="@dimen/_5mdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20mdp"
+                                android:layout_height="@dimen/_20mdp"
+                                android:src="@drawable/baseline_favorite_24" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/donation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5mdp"
+                        android:background="@drawable/bg_yellow_corner"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="@dimen/_60mdp"
+                            android:layout_height="@dimen/_60mdp"
+                            android:padding="@dimen/_10mdp"
+                            android:src="@drawable/donation"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_20font_mdp"
+                            android:text="Donate"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10mdp"
-                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginEnd="@dimen/_10mdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reels"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12font_mdp"/>
+                <TextView
+                    android:id="@+id/seeReels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/see_more"
+                    android:textSize="@dimen/_12font_mdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5mdp"/>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/reelsRec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5mdp"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout="@layout/demo_status"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                tools:listitem="@layout/layout_story_item"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
                 android:layout_marginEnd="@dimen/_10mdp"
                 android:orientation="horizontal">
                 <TextView
