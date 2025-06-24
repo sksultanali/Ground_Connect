@@ -11,7 +11,7 @@ A community platform connecting users with trusted local businesses and service 
 | Category | Features |
 |----------|----------|
 | **Business Discovery** | Search, filters, categories, ratings |
-| **Service Booking** | Appointments, instant requests |
+| **Appointment Booking** | Appointments, instant requests |
 | **Deals & Offers** | Local promotions, flash sales |
 | **Community Reviews** | Verified customer feedback |
 | **Business Tools** | Dashboard, analytics, promotions |
@@ -30,24 +30,14 @@ A community platform connecting users with trusted local businesses and service 
 
 </div>
 
-## 📲 Download Options
-
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200">](https://play.google.com/store/apps/details?id=com.developerali.groundconnect)
-[<img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge&logo=android" width="200">](https://github.com/sksultanali/Ground_Connect/releases/latest)
-
 ## 💻 Technical Implementation
 
-- **Frontend**: Kotlin, Jetpack Compose
-- **Backend**: Node.js, Firebase
-- **Database**: Firestore, MongoDB
-- **Integrations**:
-  - Google Maps API
-  - Razorpay Payments
-  - Twilio SMS
+- **Frontend**: Java, Android Studio
+- **Backend**: PHP, Firebase
+- **Database**: Firestore, MySqli
 - **Key Libraries**:
   - Retrofit (Networking)
-  - Coil (Image Loading)
-  - WorkManager (Background Tasks)
+  - Glide (Image Loading)
 
 ## 🏆 Business Benefits
 
@@ -57,17 +47,6 @@ A community platform connecting users with trusted local businesses and service 
 4. **Promotional Tools** for businesses
 5. **Community Engagement** features
 
-## 📈 Version History
-
-| Version | Date       | Highlights |
-|---------|------------|------------|
-| v2.5.0  | 2025-08-10 | Added business analytics |
-| v2.2.1  | 2025-07-15 | Improved search filters |
-| v2.0.0  | 2025-06-01 | Major UI redesign |
-
-## 📜 License
-
-MIT License - See [LICENSE](LICENSE) for details.
 
 ## 📞 Contact
 
